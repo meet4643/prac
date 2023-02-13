@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form id="form1">
+      <tr>
+        <th>student Name:<input type="text" id="sname" /><br /></th>
+        <th>student email:<input type="email" id="email" /><br /></th>;
+        <th>student phone:<input type="number" id="number" />
+      </tr>
+      <input type="submit" value="register" />
+    </form>
+
+    <button onclick="timar()"></button>
+
+    <script>
+      document.getElementById("form1");
+
+      form1.addEventListener("submit", function sub(e) {
+        e.preventDefault();
+
+        var sname = document.getElementById("sname").value;
+        console.log(sname);
+        document.getElementById("sname").value = "";
+
+        var email = document.getElementById("email").value;
+        console.log(email);
+        document.getElementById("email").value = "";
+
+        var number = document.getElementsByTagName("input")[2].value;
+        console.log(number);
+        document.getElementById("number").value = "";
+      });
+
+      let a = {};
+      let b = {};
+
+      a == b ? alert("Please") : alert("no");
+
+      let mbg = setInterval(function timer(ll) {
+        console.log();
+      }, 1000);
+
+      function timar() {
+        clearInterval(mbg);
+
+        timer("ABC");
+      }
+    </script>
+  </body>
+</html>
